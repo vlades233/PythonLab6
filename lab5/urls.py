@@ -18,6 +18,10 @@ from django.urls import path
 from Zabbix_babysize import views
 
 urlpatterns = [
- path('', views.index, name='home'),
- path('admin/', admin.site.urls),
+# path('', views.index, name='home'),
+# path('form/', views.ServerCreateView),
+path('', views.index),
+path('servers/', views.servers),
+path('admin/', admin.site.urls),
+#re_path(r'^servers/(?P<id>\d+)/', views.servers),
 ]
