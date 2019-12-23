@@ -27,8 +27,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['0.0.0.0/0']
-ALLOWED_HOSTS = ['176.107.131.209']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'lab5.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

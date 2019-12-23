@@ -15,7 +15,7 @@ def index(request):
 
 def server(request, id):
  server = Server.objects.filter(id=id).values()
- category = ServerCategory.objects.filter(id=list(sensor)[0]['category_id']).values()
+ category = ServerCategory.objects.filter(id=list(server)[0]['category_id']).values()
  return render(request, "server.html", context={"server": list(server)[0], "category": list(category)[0]})
 
 def servers(request):
